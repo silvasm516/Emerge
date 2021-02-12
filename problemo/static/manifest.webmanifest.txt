@@ -1,0 +1,38 @@
+
+
+
+{
+  "name": "Birthday",
+  "short_name": "Birthday",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "birthday chance of students",
+  "theme_color": "#317EFB"
+   }
+  "icons": [{
+    "src": "images/touch/Cake248.png",
+    "sizes": "248x248",
+    "type": "/png"
+  }, {
+    "src": "images/touch/Cake117.png",
+    "sizes": "117x117",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/Cake325.png",
+    "sizes": "325x325",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/Cake75.png",
+    "sizes": "75x75",
+    "type": "image/png"
+  } ]
+  "related_applications": [{
+    "platform": "play",
+    "url": ""
+  }]
+}

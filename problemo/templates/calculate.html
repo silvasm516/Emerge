@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel= 'stylesheet' href= "/Birth/problemo/static/base.css" > 
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width= device-width, initial-scale=1"/>
+  <link rel="manifest" href="/index/manifest.webmanifest" crossorigin="allow">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+
+body {
+  background-color:darkred;
+}
+
+#fm  {
+    justify-content: center;
+}
+
+#butt  {
+  background-color:lightslategray;
+}
+</style>
+
+<h2><title>{{tit}}</title></h2>
+
+</head>
+
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <form class="col-12" method= "Post" action= "/A">
+		    {% csrf_token %}
+            <div class="form-group" id = "fm">
+              <label for="formGroupExampleInput">Enter Number of Students</label>
+              <input type="text" class="form-control" id="students" name= "students" placeholder="input">
+			  <input type="submit" class="form-control" id = "butt">
+            </div>
+          </form>   
+        </div>
+      </div>   
+      
+
+
+      
+
+<script>
+
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed, error:', error);
+  });
+}
+
+var x = document.getElementById("y");
+
+if(x.addEventListener) {x.addEventListener("click", go, false);
+			} 
+			 else if(x.attachEvent) {
+			 x.attachEvent("onclick", go);
+			 } 
+
+function go() {
+
+
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+<html lang="en">
+<style type="text/css">
+html, body {
+    background-color:darkred; 
+    height: 100;
+    
+}
+
+.row  {
+    margin-top: 30%;
+}
+
+
+
+p {
+    margin-left:0;
+    font-family: arial;
+    font-weight: bold;
+}
+
+#again  {
+    margin-left: 40%;
+    
+}
+
+#result  {
+    font-family: arial;
+    font-weight: bold;
+    font-size: medium;
+    padding:0;
+    border: none;   
+         }
+
+         
+</style>
+
+<link rel="manifest" href="http://127.0.0.1:8000/index/manifest.webmanifest" crossorigin="allow">
+<link rel="apple-touch-icon" sizes="144x144" href = "http://127.0.0.1:8000/index/manifest.webmanifest"
+<meta name="theme-color" content="#317EFB"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width= device-width, initial-scale=1"/>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<h2><title>Probability Two Have Same Birthday</title></h2>
+
+</head>
+
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <form class="col-12">
+		    {% csrf_token %}
+            <div class="d-flex align-items-center justify-content-center h-50">
+                <div class="d-flex flex-column">
+                    <div class=”col-6 align-self-center”></div>
+                    <p>Chance That Two Have Same Birthday</p>
+                    <textarea id="result" name="result" rows="4" cols="25">{{result}} %</textarea>   
+                    </div>
+                </div>
+            </div>
+          </form>
+          
+        </div>
+    </div>   
+      
+<form id= "again">
+    <input type="button" style="background-color: rgb(31, 87, 65); color: whitesmoke;"  value="Again" onclick="history.back()">
+</form>
+      
+
+<script>
+var x = document.getElementById("y");
+
+if(x.addEventListener) {x.addEventListener("click", go, false);
+			} 
+			 else if(x.attachEvent) {
+			 x.attachEvent("onclick", go);
+			 } 
+
+function go() {
+
+
+
+}
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed, error:', error);
+  });
+}
+</script>
+
+</body>
+</html>
